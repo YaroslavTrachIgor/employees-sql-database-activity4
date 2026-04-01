@@ -1,0 +1,24 @@
+// Prisma schema: SQLite for local development; open the same file in DBeaver / DB Browser for GUI access.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  MANAGER
+  EMPLOYEE
+}
+
+model User {
+  id           String   @id @default(cuid())
+  /// Login username (user ID) shown on the GUI
+  userId       String   @unique
+  passwordHash String
+  role         Role     @default(EMPLOYEE)
+  createdAt    DateTime @default(now())
+}
