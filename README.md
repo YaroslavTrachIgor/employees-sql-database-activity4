@@ -29,25 +29,17 @@ Dark-mode UI examples from a local run:
 
 ### Manager dashboard
 
-Overview and **Create account** (manager-only). New users are persisted to SQLite with bcrypt-hashed passwords.
-
 ![Manager dashboard with overview and create-account form](docs/example-images/03-dashboard-manager.png)
 
 ### Validation (duplicate user ID)
-
-Server-side check against the database when a user ID already exists:
 
 ![Create account error: duplicate user ID](docs/example-images/04-dashboard-manager-validation.png)
 
 ### Employee dashboard
 
-Team navigation is unavailable; copy explains role restrictions.
-
 ![Employee dashboard with limited workspace](docs/example-images/02-dashboard-employee.png)
 
 ### Team & accounts (manager only)
-
-Read-only list of users from SQLite (via Prisma); demonstrates unique `userId` constraint in the UI.
 
 ![Team and accounts table](docs/example-images/05-team-accounts.png)
 
